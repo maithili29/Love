@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= BASE ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+overflow-x:hidden;
+background:linear-gradient(-45deg,#140004,#2b0713,#4d1023,#140004);
+background-size:400% 400%;
+animation:bgMove 15s ease infinite;
+color:#ffe3ea;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* floating soft glow background */
+body::before{
+content:"❤️ 💋 ✨ 🌹 💕";
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+opacity:0.06;
+font-size:40px;
+animation:floatBg 20s linear infinite;
+z-index:-1;
+}
+
+@keyframes floatBg{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-120vh);}
+}
+
+/* ================= HERO ================= */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero-image{
+width:220px;
+height:220px;
+border-radius:50%;
+overflow:hidden;
+border:4px solid rgba(255,255,255,0.1);
+box-shadow:0 0 40px rgba(255,143,171,0.25);
+}
+
+.hero-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero h1{
+font-size:3.8rem;
+font-family:'Great Vibes',cursive;
+color:#ffb3c7;
+margin-top:20px;
+}
+
+.hero-text{
+max-width:700px;
+margin-top:20px;
+line-height:2;
+font-size:0.95rem;
+}
+
+.btn{
+margin-top:30px;
+padding:14px 32px;
+border:none;
+border-radius:50px;
+background:linear-gradient(135deg,#ff5c8a,#ff8fab);
+color:white;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* ================= CHAPTER ================= */
+
+.chapter{
+width:90%;
+max-width:1200px;
+margin:60px auto;
+padding:40px;
+display:flex;
+gap:40px;
+align-items:center;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+border-radius:30px;
+border:1px solid rgba(255,255,255,0.08);
+}
+
+.left{width:45%;}
+.right{width:55%;}
+
+.gallery{
+width:100%;
+height:480px;
+position:relative;
+border-radius:25px;
+overflow:hidden;
+}
+
+.gallery img{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+opacity:0;
+animation:fade 15s infinite;
+}
+
+.gallery img:nth-child(1){animation-delay:0s;}
+.gallery img:nth-child(2){animation-delay:5s;}
+.gallery img:nth-child(3){animation-delay:10s;}
+
+@keyframes fade{
+0%{opacity:0;}
+10%{opacity:1;}
+30%{opacity:1;}
+40%{opacity:0;}
+100%{opacity:0;}
+}
+
+.right h2{
+font-size:2.6rem;
+font-family:'Great Vibes',cursive;
+color:#ffb3c7;
+margin-bottom:20px;
+}
+
+.right p{
+font-size:0.9rem;
+line-height:2;
+margin-bottom:15px;
+}
+
+.quote{
+margin-top:15px;
+font-size:1.3rem;
+font-family:'Great Vibes',cursive;
+color:#ffb3c7;
+}
+
+/* ================= FINAL ================= */
+
+.final{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+
+.box{
+max-width:800px;
+padding:60px 40px;
+text-align:center;
+border-radius:30px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(18px);
+}
+
+.box h1{
+font-size:3.5rem;
+font-family:'Great Vibes',cursive;
+color:#ffb3c7;
+}
+
+.box p{
+margin-top:15px;
+line-height:2;
+}
+
+/* ================= POPUP ================= */
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+justify-content:center;
+align-items:center;
+background:rgba(0,0,0,0.7);
+}
+
+.popup-box{
+background:linear-gradient(145deg,#2c0713,#4d1023);
+padding:40px;
+border-radius:25px;
+text-align:center;
+width:90%;
+max-width:500px;
+}
+
+.popup-box h2{
+font-size:3rem;
+color:#ffb3c7;
+font-family:'Great Vibes',cursive;
+}
+
+/* ================= CINEMATIC EFFECTS ================= */
+
+.floating span{
+position:fixed;
+font-size:28px;
+opacity:0.08;
+animation:floatUp 20s linear infinite;
+z-index:-1;
+}
+
+@keyframes floatUp{
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-120vh);}
+}
+
+/* heart burst */
+.heart{
+position:fixed;
+font-size:20px;
+animation:burst 1s ease-out forwards;
+pointer-events:none;
+}
+
+@keyframes burst{
+0%{transform:scale(1);opacity:1;}
+100%{transform:scale(2) translateY(-80px);opacity:0;}
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+.chapter{
+flex-direction:column;
+}
+.left,.right{width:100%;}
+.hero h1{font-size:2.6rem;}
+.gallery{height:320px;}
+.box h1{font-size:2.5rem;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING -->
+<div class="floating">
+<span>❤️</span><span>💋</span><span>✨</span><span>🌹</span><span>💕</span>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-image">
+<img src="hero.jpeg">
+</div>
+
+<h1>Happy Birthday My Love ❤️</h1>
+
+<p class="hero-text">
+Some people become home without trying...
+you became mine.
+</p>
+
+<button class="btn" onclick="scrollToSection('c1')">
+Start My Story 💌
+</button>
+
+</section>
+
+<!-- CHAPTER 1 -->
+<section class="chapter" id="c1">
+
+<div class="left">
+<div class="gallery">
+<img src="photo1.jpeg">
+<img src="photo2.jpeg">
+<img src="photo3.jpeg">
+</div>
+</div>
+
+<div class="right">
+<h2>How It Started ❤️</h2>
+
+<p>
+When I first saw you, I didn’t know you would become my favorite person.
+</p>
+
+<p>
+Your patience, your care, your smile…
+slowly became my comfort.
+</p>
+
+<div class="quote">You became my safest feeling ❤️</div>
+
+<button class="btn" onclick="scrollToSection('c2')">Next 💕</button>
+</div>
+
+</section>
+
+<!-- CHAPTER 2 -->
+<section class="chapter" id="c2">
+
+<div class="left">
+<div class="gallery">
+<img src="photo4.jpeg">
+<img src="photo5.jpeg">
+<img src="photo6.jpeg">
+</div>
+</div>
+
+<div class="right">
+<h2>Memories 💖</h2>
+
+<p>
+The rose, the chocolate, the moments…
+I still keep everything in my heart.
+</p>
+
+<p>
+Even silence with you feels special.
+</p>
+
+<div class="quote">Every memory = you ❤️</div>
+
+<button class="btn" onclick="scrollToSection('final')">Final 💖</button>
+</div>
+
+</section>
+
+<!-- FINAL -->
+<section class="final" id="final">
+
+<div class="box">
+
+<h1>Happy Birthday My Love ❤️</h1>
+
+<p>
+You are not just part of my life…
+you are my peace, my comfort, my feeling.
+</p>
+
+<button class="btn" onclick="openPopup()">Open Heart 💌</button>
+
+</div>
+
+</section>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-box">
+
+<h2>I Love You ❤️</h2>
+
+<p>You became my forever feeling.</p>
+
+<button class="btn" onclick="closePopup()">Close</button>
+
+</div>
+</div>
+
+<script>
+
+/* scroll */
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+/* popup */
+function openPopup(){
+document.getElementById('popup').style.display='flex';
+}
+
+function closePopup(){
+document.getElementById('popup').style.display='none';
+}
+
+/* heart burst */
+document.addEventListener("click", (e)=>{
+for(let i=0;i<5;i++){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+heart.style.left=e.clientX+"px";
+heart.style.top=e.clientY+"px";
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),1000);
+}
+});
+
+</script>
+
+</body>
+</html>
